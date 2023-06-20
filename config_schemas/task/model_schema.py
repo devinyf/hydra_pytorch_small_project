@@ -18,6 +18,14 @@ class SimpleModelConfig(ModelConfig):
     head: head_schema.HeadConfig = MISSING
 
 
+@dataclass
+class Cifar10ModelConfig(ModelConfig):
+    _target_: str = "models.CIFAR10Model"
+    backbone: backbone_schema.BackboneConfig = MISSING
+    adapter: adapter_schema.AdapterConfig = MISSING
+    head: head_schema.HeadConfig = MISSING
+
+
 def setup_config() -> None:
     backbone_schema.setup_config()
     adapter_schema.setup_config()
@@ -25,3 +33,4 @@ def setup_config() -> None:
 
     cs = ConfigStore.instance()
     cs.store(group="task/model", name="simple_model_schema", node=SimpleModelConfig)
+    cs.store(group="task/model", name="cifar10_model_schema", node=SimpleModelConfig)

@@ -1,6 +1,9 @@
 
 
-_target_: torch.optim.Adam
+# _target_: torch.optim.Adam
+defaults:
+  - adam_optimizer_schema
+
 _partial_: true
 lr: 5e-5
 weight_decay: 0.2

@@ -1,6 +1,7 @@
+defaults:
+  - cifar10_data_module_schema
 
-
-_target_: data_modules.CIFAR10DataModule
+# _target_: data_modules.CIFAR10DataModule
 batch_size: 64
 num_workers: 8
 pin_memory: true

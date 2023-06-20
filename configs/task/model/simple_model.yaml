@@ -1,7 +1,8 @@
 
 defaults:
+  - simple_model_schema
   - backbone: resnet18
   - adapter: linear_512_10
   - head: identity_head
 
-_target_: models.SimpleModel
+# _target_: models.SimpleModel

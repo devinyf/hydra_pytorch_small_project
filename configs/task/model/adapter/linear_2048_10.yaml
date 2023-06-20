@@ -1,5 +1,9 @@
 
 
-_target_: adapters.LinearAdapter
+# _target_: adapters.LinearAdapter
+
+defaults:
+  - linear_adapter_schema
+
 in_features: 2048
 out_features: 10

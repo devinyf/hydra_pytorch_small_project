@@ -13,7 +13,14 @@ class TaskConfig:
 
 @dataclass
 class MNISTClassifciationTaskConfig(TaskConfig):
-    _target_: str = "tasks.MNISTClassificationTrainingTask"
+    _target_: str = "tasks.MNISTClassification"
+    model: model_schema.ModelConfig = MISSING
+    loss_function: loss_function_schema.LossFunctionConfig = MISSING
+
+
+@dataclass
+class CIFAR10ClassifciationTaskConfig(TaskConfig):
+    _target_: str = "tasks.CIFAR10Classification"
     model: model_schema.ModelConfig = MISSING
     loss_function: loss_function_schema.LossFunctionConfig = MISSING
 
@@ -25,3 +32,4 @@ def setup_config() -> None:
 
     cs = ConfigStore.instance()
     cs.store(group="task", name="mnist_classification_training_task_schema", node=MNISTClassifciationTaskConfig)
+    cs.store(group="task", name="cifar10_classification_training_task_schema", node=CIFAR10ClassifciationTaskConfig)

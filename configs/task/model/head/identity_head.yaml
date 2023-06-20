@@ -1,3 +1,5 @@
 
 
-_target_: heads.IdentityHead
+# _target_: heads.IdentityHead
+defaults:
+  - identity_head_schema

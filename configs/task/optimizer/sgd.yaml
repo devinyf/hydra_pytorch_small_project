@@ -1,5 +1,7 @@
 
-_target_: torch.optim.SGD
+# _target_: torch.optim.SGD
+defaults:
+  - sgd_optimizer_schema
 _partial_: true
 lr: 5e-5
 weight_decay: 0.2

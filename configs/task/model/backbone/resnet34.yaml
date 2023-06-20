@@ -1,4 +1,5 @@
+defaults:
+  - resnet34_schema
 
-
-_target_: backbones.ResNet34
+# _target_: backbones.ResNet34
 pretrained: true

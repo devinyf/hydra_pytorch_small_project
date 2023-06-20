@@ -1,6 +1,7 @@
+defaults:
+  - mnist_data_module_schema
 
-
-_target_: data_modules.MNISTDataModule
+# _target_: data_modules.MNISTDataModule
 batch_size: 64
 num_workers: 8
 pin_memory: true
